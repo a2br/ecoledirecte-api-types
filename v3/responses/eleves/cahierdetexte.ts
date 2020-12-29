@@ -58,7 +58,7 @@ export type textbookDateAssignement = {
 
 //? WITHOUT DATE
 
-export type _textbookRes = textbookResSuccess | failureRes;
+export type textbookRes = textbookResSuccess | failureRes;
 
 export type textbookResSuccess = {
 	code: 200;
@@ -67,7 +67,7 @@ export type textbookResSuccess = {
 
 	/**
 	 * UNPREDICTABLE KEYS
-	 * @example data["2020-01-14"]: Arrray<_textbookAssignement>
+	 * @example data["2020-01-14"]: Array<textbookAssignement>
 	 */
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	data: any;
