@@ -1,6 +1,6 @@
 {
 	"name": "ecoledirecte-api-types",
-	"version": "0.1.0",
+	"version": "0.0.0",
 	"description": "",
 	"main": "index.js",
 	"repository": {
@@ -8,7 +8,9 @@
 		"url": "https://github.com/a2br/ecoledirecte-api-types"
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"prepublish": "npm run build",
+		"build": "tsc",
+		"test": "echo \"Error: no test specified\" && exit 0"
 	},
 	"keywords": [
 		"ecoledirecte",
