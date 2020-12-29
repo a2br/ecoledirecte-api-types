@@ -2,10 +2,18 @@ node_modules
 
 # Don't commit build outputs
 
-v*/**/*.js
-v*/**/*.map
-v*/**/*.d.ts
+# v*/**/*.js
+# v*/**/*.map
+# v*/**/*.d.ts
 
-default/*.js
-default/*.map
-default/*.d.ts
+# default/*.js
+# default/*.map
+# default/*.d.ts
+
+# util/*.js
+# util/*.map
+# util/*.d.ts
+
+*.js
+*.map
+*.d.ts
