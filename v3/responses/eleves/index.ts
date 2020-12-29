@@ -1,1 +1,1 @@
-export * as messagerie from "../messagerie";
+export * from "../messagerie";
