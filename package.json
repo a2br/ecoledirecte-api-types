@@ -2,7 +2,7 @@
 	"name": "ecoledirecte-api-types",
 	"version": "0.1.0",
 	"description": "",
-	"main": "index.js",
+	"main": "default/index.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/a2br/ecoledirecte-api-types"
