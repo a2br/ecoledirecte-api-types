@@ -4,6 +4,8 @@ type Solid<T> = {
 	[P in keyof T]-?: T[P];
 };
 
+export const root = "https://api.ecoledirecte.com";
+
 export const Routes = {
 	//! LOGIN
 
@@ -114,5 +116,12 @@ export const Routes = {
 			`/v3/Eleves/${studentId}/cahierdetexte/${date}.awp`,
 			nParams
 		);
+	},
+
+	studentGrades(studentId: number): string {
+		const params = {
+			verbe: "get",
+		};
+		return Util.mergeParams(`/v3/eleves/${studentId}/notes.awp`, params);
 	},
 };
