@@ -29,7 +29,7 @@ export default class Util {
 	 */
 	static mergeParams(url: string, params: Record<string, unknown>): string {
 		if (!Object.keys(params).length) return url;
-		const paramsS = Object.keys(params).map((key) => {
+		const paramsS = Object.keys(params).map(key => {
 			return `${key}=${params[key]}`;
 		});
 		const finalUrl = [url, paramsS.join("&")].join("?");
