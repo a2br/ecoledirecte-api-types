@@ -60,7 +60,7 @@ export const Routes = {
 	studentMessage<
 		tempParams extends {
 			verbe?: "get";
-			mode: "received" | "sent" | "";
+			mode: "destinataire" | "expediteur" | "";
 		}
 	>(studentId: number, messageId: number, params: tempParams): string {
 		type params = Solid<tempParams>;
