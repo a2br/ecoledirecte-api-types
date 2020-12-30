@@ -70,7 +70,7 @@ export type textbookResSuccess = {
 	 * @example data["2020-01-14"]: Array<textbookAssignement>
 	 */
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	data: any;
+	data: Record<string, Array<textbookAssignement>>;
 };
 
 export type textbookAssignement = {
