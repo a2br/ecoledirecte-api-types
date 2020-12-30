@@ -35,8 +35,8 @@ export const Routes = {
 			query?: "" | unknown;
 			idClasseur?: number;
 		}
-	>(studentId: number, params: tempParams): string {
-		type params = Solid<tempParams>;
+	>(studentId: number, params?: tempParams): string {
+		type solid = Solid<tempParams>;
 		const defaultParams = {
 			verbe: "getall",
 			typeRecuperation: "received",
@@ -47,9 +47,9 @@ export const Routes = {
 			onlyRead: "",
 			query: "",
 			idClasseur: 0,
-		} as params;
+		} as solid;
 
-		const nParams: params = Util.mergeDefault(defaultParams, params);
+		const nParams: solid = Util.mergeDefault(defaultParams, params);
 		return Util.mergeParams(`/v3/eleves/${studentId}/messages.awp`, nParams);
 	},
 
@@ -63,12 +63,12 @@ export const Routes = {
 			mode: "destinataire" | "expediteur" | "";
 		}
 	>(studentId: number, messageId: number, params: tempParams): string {
-		type params = Solid<tempParams>;
+		type solid = Solid<tempParams>;
 		const defaultParams = {
 			verbe: "get",
 			mode: "",
-		} as params;
-		const nParams: params = Util.mergeDefault(defaultParams, params);
+		} as solid;
+		const nParams: solid = Util.mergeDefault(defaultParams, params);
 		return Util.mergeParams(
 			`/v3/eleves/${studentId}/messages/${messageId}.awp`,
 			nParams
@@ -83,12 +83,12 @@ export const Routes = {
 		tempParams extends {
 			verbe?: "get" | "put";
 		}
-	>(studentId: number, params: tempParams): string {
-		type params = Solid<tempParams>;
+	>(studentId: number, params?: tempParams): string {
+		type solid = Solid<tempParams>;
 		const defaultParams = {
 			verbe: "get",
-		} as params;
-		const nParams: params = Util.mergeDefault(defaultParams, params);
+		} as solid;
+		const nParams: solid = Util.mergeDefault(defaultParams, params);
 
 		return Util.mergeParams(
 			`/v3/Eleves/${studentId}/cahierdetexte.awp`,
@@ -105,12 +105,12 @@ export const Routes = {
 		tempParams extends {
 			verbe?: "get";
 		}
-	>(studentId: number, date: string, params: tempParams): string {
-		type params = Solid<tempParams>;
+	>(studentId: number, date: string, params?: tempParams): string {
+		type solid = Solid<tempParams>;
 		const defaultParams = {
 			verbe: "get",
-		} as params;
-		const nParams: params = Util.mergeDefault(defaultParams, params);
+		} as solid;
+		const nParams: solid = Util.mergeDefault(defaultParams, params);
 
 		return Util.mergeParams(
 			`/v3/Eleves/${studentId}/cahierdetexte/${date}.awp`,
