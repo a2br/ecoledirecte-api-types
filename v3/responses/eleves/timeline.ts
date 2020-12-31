@@ -7,7 +7,7 @@ export type studTlResSuccess = {
 	code: 200;
 	token: string;
 	host: string;
-	data: Array<studTlElem>;
+	data?: Array<studTlElem>;
 };
 
 export type studTlElem = {
