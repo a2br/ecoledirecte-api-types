@@ -118,10 +118,52 @@ export const Routes = {
 		);
 	},
 
+	/**
+	 * Route for:
+	 * - POST /v3/eleves/{studentId}/notes.awp
+	 */
 	studentGrades(studentId: number): string {
 		const params = {
 			verbe: "get",
 		};
+
 		return Util.mergeParams(`/v3/eleves/${studentId}/notes.awp`, params);
+	},
+
+	/**
+	 * Route for:
+	 * - POST /v3/eleves/{studentId}/timeline.awp
+	 */
+	studentTimeline<
+		tempParams extends {
+			verbe?: "get";
+		}
+	>(studentId: number, params?: tempParams): string {
+		type solid = Solid<tempParams>;
+		const defaultParams = {
+			verbe: "get",
+		};
+		const nParams: solid = Util.mergeDefault(defaultParams, params);
+		return Util.mergeParams(`/v3/eleves/${studentId}/timeline.awp`, nParams);
+	},
+
+	/**
+	 * Route for:
+	 * - POST /v3/{accountType}/{accountId}/timelineAccueilCommun.awp
+	 */
+	commonTimeline<
+		tempParams extends {
+			verbe?: "get";
+		}
+	>(accountType: "E", accountId: number, params?: tempParams): string {
+		type solid = Solid<tempParams>;
+		const defaultParams = {
+			verbe: "get",
+		};
+		const nParams: solid = Util.mergeDefault(defaultParams, params);
+		return Util.mergeParams(
+			`/v3/${accountType}/${accountId}/timelineAccueilCommun.awp`,
+			nParams
+		);
 	},
 };
