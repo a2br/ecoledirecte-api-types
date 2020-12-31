@@ -20,6 +20,8 @@ export type timelineResSuccess = {
 	}>;
 };
 
+export type commonTimelineRes = commonTimelineResSuccess | failureRes;
+
 export type commonTimelineResSuccess = {
 	code: 200;
 	token: string;
