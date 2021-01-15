@@ -46,7 +46,7 @@ export type textbookDateAssignement = {
 		};
 	};
 	/** The one of the day */
-	contenuDeSeance: {
+	contenuDeSeance?: {
 		idDevoir: number;
 		/** BASE64 */
 		contenu: string;
