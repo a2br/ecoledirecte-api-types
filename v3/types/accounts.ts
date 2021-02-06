@@ -64,8 +64,16 @@ export type studentAccount = {
 		sexe: string;
 		infoEDT: string;
 		nomEtablissement: string;
-		idEtablissement: number;
-		idReelEtab: number;
+		/**
+		 * @example
+		 * "2"
+		 */
+		idEtablissement: string;
+		/**
+		 * @example
+		 * "2"
+		 */
+		idReelEtab: string;
 		photo: string;
 		classe?: {
 			id: number;
@@ -122,7 +130,15 @@ export type familyAccount = {
 			infoEDT: string;
 			photo: string;
 			nomEtablissement: string;
+			/**
+			 * @example
+			 * "2"
+			 */
 			idEtablissement: string;
+			/**
+			 * @example
+			 * "2"
+			 */
 			idReelEtab: string;
 			modules: Array<accountModule>;
 			classe: {
@@ -172,7 +188,11 @@ export type teacherAccount = {
 		sexe?: string;
 		infoEDT?: string;
 		nomEtablissement: string;
-		idEtablissement: number;
+		/**
+		 * @example
+		 * "2"
+		 */
+		idEtablissement: string;
 		photo: string;
 		classes?: Array<{
 			id: number;
@@ -219,7 +239,11 @@ export type staffAccount = {
 	};
 	profile: {
 		nomEtablissement: string;
-		idEtablissement: number;
+		/**
+		 * @example
+		 * "2"
+		 */
+		idEtablissement: string;
 		photo: string;
 		email?: string;
 	};
