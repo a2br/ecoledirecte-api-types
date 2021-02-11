@@ -1,8 +1,8 @@
 import { failureRes } from "../failure";
 
-export type reportCardRes = reportCardResSuccess | failureRes;
+export type gradesRes = gradesResSuccess | failureRes;
 
-export type reportCardResSuccess = {
+export type gradesResSuccess = {
 	code: 200;
 	token: string;
 	host: string;
