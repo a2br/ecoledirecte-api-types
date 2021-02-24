@@ -1,11 +1,11 @@
-import { accountModule, account } from "../";
+import { accountModule, account } from "..";
 
-export type staffAccount = {
+export type familyAccount = {
 	idLogin: number;
 	id: number;
 	uid: string;
 	identifiant: string;
-	typeCompte: "A";
+	typeCompte: "1";
 	codeOgec: string;
 	main: boolean;
 	lastConnexion: string;
@@ -30,18 +30,39 @@ export type staffAccount = {
 		modeAccessibiliteVisuelle: boolean;
 		typeSaisieNotesDefaut: string;
 		nbJoursMaxRenduDevoirCDT: string;
+		typeViewCDTDefaut: string;
 	};
 	profile: {
-		nomEtablissement: string;
-		/**
-		 * @example
-		 * "2"
-		 */
-		idEtablissement: string;
-		photo: string;
-		email?: string;
+		email: string;
+		telPortable: string;
+		telPortableConjoint: string;
+		eleves: Array<{
+			id: number;
+			prenom: string;
+			nom: string;
+			sexe: string;
+			infoEDT: string;
+			photo: string;
+			nomEtablissement: string;
+			/**
+			 * @example
+			 * "2"
+			 */
+			idEtablissement: string;
+			/**
+			 * @example
+			 * "2"
+			 */
+			idReelEtab: string;
+			modules: Array<accountModule>;
+			classe: {
+				id: number;
+				code: string;
+				libelle: string;
+			};
+		}>;
 	};
 };
-export function isStaffAccount(account: account): account is staffAccount {
-	return account.typeCompte === "A";
+export function isFamilyAccount(account: account): account is familyAccount {
+	return account.typeCompte === "1";
 }

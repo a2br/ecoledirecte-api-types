@@ -1,4 +1,4 @@
-import { accountModule, account } from "../";
+import { accountModule, account } from "..";
 
 export type teacherAccount = {
 	idLogin: number;

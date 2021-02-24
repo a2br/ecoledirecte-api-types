@@ -1,5 +1,5 @@
-import { failureRes } from "../responses";
-import { account } from "../types";
+import { failureRes } from "..";
+import { account } from "./accounts";
 
 export type loginRes = loginResSuccess | failureRes;
 

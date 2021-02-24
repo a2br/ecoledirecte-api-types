@@ -1,5 +1,5 @@
-import { failureRes } from "../responses";
-import { role } from "../types";
+import { failureRes } from "..";
+import { role } from "../login/accounts";
 
 export type mailboxRes = mailboxResSuccess | failureRes;
 

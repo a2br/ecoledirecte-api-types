@@ -7,8 +7,8 @@ export type gradesResSuccess = {
 	token: string;
 	host: string;
 	data: {
-		periodes: Array<periode>;
-		notes: Array<note>;
+		periodes: Array<period>;
+		notes: Array<grade>;
 		parametrage: {
 			couleurEval1: string;
 			couleurEval2: string;
@@ -65,18 +65,18 @@ export type gradesResSuccess = {
 				 * @example "4"
 				 */
 				valeur: string;
-				professeurs: Array<professeur>;
+				professeurs: Array<teacher>;
 			}>
 		>;
 	};
 };
 
-type professeur = {
+type teacher = {
 	id: number;
 	nom: string;
 };
 
-export type periode = {
+export type period = {
 	idPeriode: string;
 	periode: string;
 	annuel: boolean;
@@ -137,12 +137,12 @@ export type periode = {
 		 */
 		effectif?: string;
 		appreciationGeneraleClasse?: string;
-		disciplines: Array<discipline>;
+		disciplines: Array<subject>;
 		disciplinesSimulation: Array<unknown>;
 	};
 };
 
-export type discipline = {
+export type subject = {
 	id: number;
 	codeMatiere: string;
 	codeSousMatiere: string;
@@ -167,14 +167,14 @@ export type discipline = {
 	 * BASE64
 	 */
 	appreciationClasse?: string;
-	professeurs: Array<professeur>;
+	professeurs: Array<teacher>;
 	/**
 	 * BASE64
 	 */
 	appreciations?: Array<string>;
 };
 
-export type note = {
+export type grade = {
 	devoir: string;
 	codePeriode: string;
 	codeMatiere: string;

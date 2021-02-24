@@ -1,5 +1,5 @@
-import { accountModule } from "../";
-import { modSitFinanc } from "../";
+import { accountModule } from "..";
+import { modSitFinanc } from "..";
 
 export type studentAccountModule =
 	| modStudBarcode

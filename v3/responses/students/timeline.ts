@@ -1,5 +1,5 @@
 import { failureRes } from "../failure";
-import { role } from "../../types";
+import { role } from "../login/accounts";
 
 export type studTlRes = studTlResSuccess | failureRes;
 

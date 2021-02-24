@@ -18,7 +18,6 @@ export const Routes = {
 	},
 
 	//! STUDENT
-
 	/**
 	 * Route for:
 	 * - POST /v3/login.awp

@@ -1,4 +1,4 @@
-import { failureRes } from "../../responses";
+import { failureRes } from "..";
 
 //? WITH DATE
 
