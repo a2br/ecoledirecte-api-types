@@ -1,6 +1,8 @@
 import { failureRes } from "..";
 import { account } from "./accounts";
 
+export * from "./accounts";
+
 export type loginRes = loginResSuccess | failureRes;
 
 export type loginResSuccess = {
