@@ -1,5 +1,5 @@
 import Util from "../util/Util";
-import { role } from "./types";
+import { role } from ".";
 
 type Solid<T> = {
 	[P in keyof T]-?: T[P];
