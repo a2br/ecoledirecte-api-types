@@ -173,7 +173,7 @@ export const Routes = {
 	 */
 	cloudFolder<
 		tempParams extends {
-			verbe?: "get";
+			verbe?: "get" | "post" | "delete";
 			idFolder?: string;
 		}
 	>(accountType: role, accountId: number, params?: tempParams): string {
