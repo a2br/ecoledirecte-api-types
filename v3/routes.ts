@@ -202,6 +202,7 @@ export const Routes = {
 		type solid = Solid<tempParams>;
 		const defaultParams = {
 			verbe: "post",
+			leTypeDeFichier: "CLOUD",
 		};
 		const nParams: solid = Util.mergeDefault(defaultParams, params);
 		return Util.mergeParams("/v3/telechargement.awp", nParams);
