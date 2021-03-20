@@ -15,7 +15,10 @@ export type cloudResFolder = {
 	libelle: string;
 	date: string;
 	taille: number;
-	quota: number;
+	/**
+	 * @description Only for cloud roots
+	 */
+	quota?: number;
 	id: string;
 	isLoaded: boolean;
 	children: Array<cloudResFolder | cloudResFile>;
