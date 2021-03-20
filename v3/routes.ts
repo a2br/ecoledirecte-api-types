@@ -187,4 +187,23 @@ export const Routes = {
 			nParams
 		);
 	},
+
+	/**
+	 * Route for:
+	 * - POST /v3/telechargement.awp?verbe=post&fichierId=string&leTypeDeFichier=CLOUD
+	 */
+	downloadFile<
+		tempParams extends {
+			verbe?: "post";
+			fichierId?: string;
+			leTypeDeFichier?: "CLOUD";
+		}
+	>(params?: tempParams): string {
+		type solid = Solid<tempParams>;
+		const defaultParams = {
+			verbe: "post",
+		};
+		const nParams: solid = Util.mergeDefault(defaultParams, params);
+		return Util.mergeParams("/v3/telechargement.awp", nParams);
+	},
 };
