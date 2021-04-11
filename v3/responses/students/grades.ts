@@ -6,68 +6,70 @@ export type gradesResSuccess = {
 	code: 200;
 	token: string;
 	host: string;
-	data: {
-		periodes: Array<period>;
-		notes: Array<grade>;
-		parametrage: {
-			couleurEval1: string;
-			couleurEval2: string;
-			couleurEval3: string;
-			couleurEval4: string;
-			libelleEval1: string;
-			libelleEval2: string;
-			libelleEval3: string;
-			libelleEval4: string;
-			affichageMoyenne: boolean;
-			affichagePositionMatiere: boolean;
-			affichageNote: boolean;
-			affichageCompetence: boolean;
-			affichageEvaluationsComposantes: boolean;
-			affichageAppreciation: boolean;
-			coefficientNote: boolean;
-			colonneCoefficientMatiere: boolean;
-			noteGrasSousMoyenne: boolean;
-			noteGrasAudessusMoyenne: boolean;
-			libelleDevoir: boolean;
-			dateDevoir: boolean;
-			typeDevoir: boolean;
-			noteUniquementPeriodeCloture: boolean;
-			notePeriodeReleve: boolean;
-			notePeriodeAnnuelle: boolean;
-			notePeriodeHorsP: boolean;
-			libellesAppreciations: Array<string>;
-			appreciationsParametrage: Array<{
-				code: string;
-				id: number;
-				nbMaxCaractere: number;
-				libelle: string;
-			}>;
-		};
-		/**
-		 * UNPREDICTABLE KEYS
-		 * @example LSUN["A001"]: Array<{ ... }>
-		 */
-		LSUN?: Record<
-			string,
-			Array<{
-				cdt: boolean;
-				codeMatiere: string;
-				libelleMatiere: string;
-				isFirstOfMatiere: boolean;
-				nbElemProgMatiere: number;
-				codeSousMatiere: string;
-				libelleSousMatiere: string;
-				isFirstOfSousMatiere: boolean;
-				nbElemProfSousMatiere: number;
-				libelleElementProgramme: string;
-				idElemProg: number;
-				/**
-				 * @example "4"
-				 */
-				valeur: string;
-				professeurs: Array<teacher>;
-			}>
-		>;
+	data: gradesResData;
+	/**
+	 * UNPREDICTABLE KEYS
+	 * @example LSUN["A001"]: Array<{ ... }>
+	 */
+	LSUN?: Record<
+		string,
+		Array<{
+			cdt: boolean;
+			codeMatiere: string;
+			libelleMatiere: string;
+			isFirstOfMatiere: boolean;
+			nbElemProgMatiere: number;
+			codeSousMatiere: string;
+			libelleSousMatiere: string;
+			isFirstOfSousMatiere: boolean;
+			nbElemProfSousMatiere: number;
+			libelleElementProgramme: string;
+			idElemProg: number;
+			/**
+			 * @example "4"
+			 */
+			valeur: string;
+			professeurs: Array<teacher>;
+		}>
+	>;
+};
+
+export type gradesResData = {
+	periodes: Array<period>;
+	notes: Array<grade>;
+	parametrage: {
+		couleurEval1: string;
+		couleurEval2: string;
+		couleurEval3: string;
+		couleurEval4: string;
+		libelleEval1: string;
+		libelleEval2: string;
+		libelleEval3: string;
+		libelleEval4: string;
+		affichageMoyenne: boolean;
+		affichagePositionMatiere: boolean;
+		affichageNote: boolean;
+		affichageCompetence: boolean;
+		affichageEvaluationsComposantes: boolean;
+		affichageAppreciation: boolean;
+		coefficientNote: boolean;
+		colonneCoefficientMatiere: boolean;
+		noteGrasSousMoyenne: boolean;
+		noteGrasAudessusMoyenne: boolean;
+		libelleDevoir: boolean;
+		dateDevoir: boolean;
+		typeDevoir: boolean;
+		noteUniquementPeriodeCloture: boolean;
+		notePeriodeReleve: boolean;
+		notePeriodeAnnuelle: boolean;
+		notePeriodeHorsP: boolean;
+		libellesAppreciations: Array<string>;
+		appreciationsParametrage: Array<{
+			code: string;
+			id: number;
+			nbMaxCaractere: number;
+			libelle: string;
+		}>;
 	};
 };
 

@@ -8,10 +8,12 @@ export type textbookDateResSuccess = {
 	code: 200;
 	token: string;
 	host: string;
-	data: {
-		date: string;
-		matieres: Array<textbookDateAssignement>;
-	};
+	data: textbookDateResData;
+};
+
+export type textbookDateResData = {
+	date: string;
+	matieres: Array<textbookDateAssignement>;
 };
 
 export type textbookDateAssignement = {

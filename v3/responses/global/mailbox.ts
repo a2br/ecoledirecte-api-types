@@ -7,38 +7,40 @@ export type mailboxResSuccess = {
 	code: 200;
 	token: string;
 	host: string;
-	data: {
-		classeurs: Array<unknown>;
-		messages: {
-			received: Array<mailboxResMessage>;
-			sent: Array<mailboxResMessage>;
-			archived: Array<mailboxResMessage>;
-		};
-		parametrage: {
-			isActif: boolean;
-			canParentsLireMessagesEnfants: boolean;
-			destAdmin: boolean;
-			destEleve: boolean;
-			destFamille: boolean;
-			destProf: boolean;
-			destEspTravail: boolean;
-			disabledNotification: boolean;
-			notificationEmailEtablissement: boolean;
-			choixMailNotification: number;
-			autreMailNotification: string;
-			mailPro: string;
-			mailPerso: string;
-			messagerieApiVersion: "v3" | string;
-			blackListProfActive: boolean;
-			estEnBlackList: boolean;
-			afficherToutesLesClasses: boolean;
-		};
-		pagination: {
-			messagesRecusCount: number;
-			messagesEnvoyesCount: number;
-			messagesArchivesCount: number;
-			messagesRecusNotReadCount: number;
-		};
+	data: mailboxResData;
+};
+
+export type mailboxResData = {
+	classeurs: Array<unknown>;
+	messages: {
+		received: Array<mailboxResMessage>;
+		sent: Array<mailboxResMessage>;
+		archived: Array<mailboxResMessage>;
+	};
+	parametrage: {
+		isActif: boolean;
+		canParentsLireMessagesEnfants: boolean;
+		destAdmin: boolean;
+		destEleve: boolean;
+		destFamille: boolean;
+		destProf: boolean;
+		destEspTravail: boolean;
+		disabledNotification: boolean;
+		notificationEmailEtablissement: boolean;
+		choixMailNotification: number;
+		autreMailNotification: string;
+		mailPro: string;
+		mailPerso: string;
+		messagerieApiVersion: "v3" | string;
+		blackListProfActive: boolean;
+		estEnBlackList: boolean;
+		afficherToutesLesClasses: boolean;
+	};
+	pagination: {
+		messagesRecusCount: number;
+		messagesEnvoyesCount: number;
+		messagesArchivesCount: number;
+		messagesRecusNotReadCount: number;
 	};
 };
 
