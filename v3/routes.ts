@@ -129,6 +129,7 @@ export const Routes = {
 
 		return Util.mergeParams(`/v3/eleves/${studentId}/notes.awp`, params);
 	},
+
 	/**
 	 * Route for:
 	 * - POST /v3/eleves/{studentId}/timeline.awp
@@ -165,6 +166,7 @@ export const Routes = {
 			nParams
 		);
 	},
+
 	/**
 	 * Route for:
 	 * - POST /v3/${accountType}/${accountId}/emploidutemps.awp
@@ -181,6 +183,7 @@ export const Routes = {
 		const nParams: solid = Util.mergeDefault(defaultParams, params);
 		return Util.mergeParams(`/v3/${accountType}/${accountId}/emploidutemps.awp`, nParams);
 	},
+	
 	/**
 	 * Route for:
 	 * - POST /v3/cloud/{accountType}/{accountId}.awp
