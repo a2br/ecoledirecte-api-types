@@ -1,8 +1,8 @@
 import { failureRes } from "../failure";
 
-export type timetableRes = timetableResSucess | failureRes;
+export type timetableRes = timetableResSuccess | failureRes;
 
-export type timetableResSucess = {
+export type timetableResSuccess = {
     code: 200;
     token: string;
     host : string;
