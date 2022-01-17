@@ -169,6 +169,23 @@ export const Routes = {
 
 	/**
 	 * Route for:
+	 * - POST /v3/${accountType}/${accountId}/emploidutemps.awp
+	 */
+	timetable<
+		tempParams extends {
+			verbe?: "get";
+		}
+	>( accountType : role, accountId: number, params? : tempParams): string {
+		type solid = Solid<tempParams>;
+		const defaultParams = {
+			verbe: "get",
+		};
+		const nParams: solid = Util.mergeDefault(defaultParams, params);
+		return Util.mergeParams(`/v3/${accountType}/${accountId}/emploidutemps.awp`, nParams);
+	},
+	
+	/**
+	 * Route for:
 	 * - POST /v3/cloud/{accountType}/{accountId}.awp
 	 */
 	cloudFolder<
