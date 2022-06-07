@@ -1,1 +1,1 @@
-export * from '../global/timetable';
+export * from "../global/timetable";
