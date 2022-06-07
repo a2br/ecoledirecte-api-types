@@ -132,6 +132,14 @@ export const Routes = {
 
 	/**
 	 * Route for:
+	 * - POST /v3/comptes/detail.awp
+	 */
+	studentWallets(): string {
+		return "/v3/comptes/detail.awp?verbe=get&v=4.14.3";
+	},
+
+	/**
+	 * Route for:
 	 * - POST /v3/eleves/{studentId}/timeline.awp
 	 */
 	studentTimeline<
@@ -175,15 +183,18 @@ export const Routes = {
 		tempParams extends {
 			verbe?: "get";
 		}
-	>( accountType : role, accountId: number, params? : tempParams): string {
+	>(accountType: role, accountId: number, params?: tempParams): string {
 		type solid = Solid<tempParams>;
 		const defaultParams = {
 			verbe: "get",
 		};
 		const nParams: solid = Util.mergeDefault(defaultParams, params);
-		return Util.mergeParams(`/v3/${accountType}/${accountId}/emploidutemps.awp`, nParams);
+		return Util.mergeParams(
+			`/v3/${accountType}/${accountId}/emploidutemps.awp`,
+			nParams
+		);
 	},
-	
+
 	/**
 	 * Route for:
 	 * - POST /v3/cloud/{accountType}/{accountId}.awp
