@@ -33,6 +33,16 @@ export const Routes = {
 		return "/v3/niveauxListe.awp?verbe=get&v=4.14.7";
 	},
 
+	/**
+	 * Use with `root2`!
+	 *
+	 * Route for:
+	 * - POST *p/v3/classes/{classId}/eleves.awp?verbe=get&v=4.14.7
+	 */
+	teacherStudents(classId: number): string {
+		return `/v3/classes/${classId}/eleves.awp?verbe=get&v=4.14.7`;
+	},
+
 	//! STUDENT
 	/**
 	 * Route for:
