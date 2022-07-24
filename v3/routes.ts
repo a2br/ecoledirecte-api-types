@@ -6,6 +6,10 @@ type Solid<T> = {
 };
 
 export const root = "https://api.ecoledirecte.com";
+/**
+ * Most likely used for teacher interactions
+ */
+export const rootp = "https://apip.ecoledirecte.com";
 
 export const Routes = {
 	//! LOGIN
@@ -16,6 +20,17 @@ export const Routes = {
 	 */
 	login(): string {
 		return "/v3/login.awp";
+	},
+
+	//! TEACHER
+	/**
+	 * Use with `root2`!
+	 *
+	 * Route for:
+	 * - POST *p/v3/niveauxListe.awp?verbe=get&v=4.14.7
+	 */
+	teacherSchools(): string {
+		return "/v3/niveauxListe.awp?verbe=get&v=4.14.7";
 	},
 
 	//! STUDENT
