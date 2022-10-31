@@ -12,7 +12,7 @@ export type schoolsResSuccess = {
 
 export type schoolsResData = {
 	groupes: teacherGroup[];
-	schools: teacherSchool[];
+	etablissements: teacherSchool[];
 };
 
 type teacherGroup = unknown;
