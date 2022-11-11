@@ -5,3 +5,4 @@ export * from "./timeline";
 export * from "./cloud";
 export * from "./timetable";
 export * from "./wallets";
+export * from "./documents";

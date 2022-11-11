@@ -44,6 +44,55 @@ export const Routes = {
 	},
 
 	//! STUDENT
+
+	/**
+	 * Route for:
+	 * - POST /v3/elevesDocuments.awp
+	 */
+	studentDocuments<
+		tempParams extends {
+			/**
+			 * @example "2021-2022"
+			 */
+			archive?: string;
+			verbe?: "get";
+		}
+	>(params?: tempParams): string {
+		type solid = Solid<tempParams>;
+		const defaultParams = {
+			archive: undefined,
+			verbe: "get",
+		} as solid;
+
+		const nParams: solid = Util.mergeDefault(defaultParams, params);
+		return Util.mergeParams("/v3/elevesDocuments.awp", nParams);
+	},
+
+	/**
+	 * Route for:
+	 * - POST /v3/telechargement.awp
+	 */
+	downloadDocument<
+		tempParams extends {
+			verbe?: "get";
+			fichierId: number;
+			leTypeDeFichier: string;
+			archive?: boolean;
+			anneeArchive?: string;
+		}
+	>(params?: tempParams): string {
+		type solid = Solid<tempParams>;
+		const defaultParams = {
+			verbe: "get",
+			leTypeDeFichier: "",
+			archive: false,
+			anneeArchive: "",
+		} as solid;
+
+		const nParams: solid = Util.mergeDefault(defaultParams, params);
+		return Util.mergeParams("/v3/telechargement.awp", nParams);
+	},
+
 	/**
 	 * Route for:
 	 * - POST /v3/eleves/{studentId}/messages.awp
